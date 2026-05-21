@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Data files — commit compressed IPL.csv.gz for Streamlit Cloud; ignore raw CSV
+data/*
+!data/IPL.csv.gz
+!data/.gitkeep
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/

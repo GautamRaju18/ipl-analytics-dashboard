@@ -1,0 +1,545 @@
+
+========================================================================
+  IPL ANALYTICS DASHBOARD — DAY 1 EDA (Single-CSV format)
+========================================================================
+Loaded: 283,678 rows × 65 columns
+
+========================================================================
+  SHAPE & COLUMNS
+========================================================================
+Shape: 283,678 rows × 65 columns
+
+All columns:
+   1. Unnamed: 0
+   2. match_id
+   3. date
+   4. match_type
+   5. event_name
+   6. innings
+   7. batting_team
+   8. bowling_team
+   9. over
+  10. ball
+  11. ball_no
+  12. batter
+  13. bat_pos
+  14. runs_batter
+  15. balls_faced
+  16. bowler
+  17. valid_ball
+  18. runs_extras
+  19. runs_total
+  20. runs_bowler
+  21. runs_not_boundary
+  22. extra_type
+  23. non_striker
+  24. non_striker_pos
+  25. wicket_kind
+  26. player_out
+  27. fielders
+  28. runs_target
+  29. review_batter
+  30. team_reviewed
+  31. review_decision
+  32. umpire
+  33. umpires_call
+  34. player_of_match
+  35. match_won_by
+  36. win_outcome
+  37. toss_winner
+  38. toss_decision
+  39. venue
+  40. city
+  41. day
+  42. month
+  43. year
+  44. season
+  45. gender
+  46. team_type
+  47. superover_winner
+  48. result_type
+  49. method
+  50. balls_per_over
+  51. overs
+  52. event_match_no
+  53. stage
+  54. match_number
+  55. team_runs
+  56. team_balls
+  57. team_wicket
+  58. new_batter
+  59. power_surge_start
+  60. batter_runs
+  61. batter_balls
+  62. bowler_wicket
+  63. batting_partners
+  64. next_batter
+  65. striker_out
+
+========================================================================
+  DTYPES
+========================================================================
+Unnamed: 0             int64
+match_id               int64
+date                     str
+match_type               str
+event_name               str
+innings                int64
+batting_team             str
+bowling_team             str
+over                   int64
+ball                   int64
+ball_no              float64
+batter                   str
+bat_pos                int64
+runs_batter            int64
+balls_faced            int64
+bowler                   str
+valid_ball             int64
+runs_extras            int64
+runs_total             int64
+runs_bowler            int64
+runs_not_boundary       bool
+extra_type               str
+non_striker              str
+non_striker_pos        int64
+wicket_kind              str
+player_out               str
+fielders                 str
+runs_target          float64
+review_batter            str
+team_reviewed            str
+review_decision          str
+umpire                   str
+umpires_call            bool
+player_of_match          str
+match_won_by             str
+win_outcome              str
+toss_winner              str
+toss_decision            str
+venue                    str
+city                     str
+day                    int64
+month                  int64
+year                   int64
+season                   str
+gender                   str
+team_type                str
+superover_winner         str
+result_type              str
+method                   str
+balls_per_over         int64
+overs                  int64
+event_match_no           str
+stage                    str
+match_number             str
+team_runs              int64
+team_balls             int64
+team_wicket            int64
+new_batter               str
+power_surge_start    float64
+batter_runs            int64
+batter_balls           int64
+bowler_wicket          int64
+batting_partners         str
+next_batter              str
+striker_out             bool
+
+========================================================================
+  NULL COUNTS (columns with any nulls)
+========================================================================
+                   null_count  null_%
+power_surge_start      283678  100.00
+team_reviewed          282771   99.68
+review_batter          282771   99.68
+review_decision        282771   99.68
+umpire                 282771   99.68
+method                 279788   98.63
+superover_winner       279782   98.63
+result_type            278954   98.33
+fielders               273433   96.39
+new_batter             270085   95.21
+next_batter            270085   95.21
+wicket_kind            269572   95.03
+player_out             269572   95.03
+extra_type             268185   94.54
+runs_target            147168   51.88
+win_outcome              4724    1.67
+
+Total null cells : 4,026,110
+Columns with nulls: 16 / 65
+
+========================================================================
+  SAMPLE — first 3 rows (key columns only)
+========================================================================
+   match_id        date   season  year           batting_team                 bowling_team  over  ball       batter   bowler  runs_total  runs_batter wicket_kind                  toss_winner toss_decision           match_won_by                  venue
+0    335982  2008-04-18  2007/08  2008  Kolkata Knight Riders  Royal Challengers Bangalore     0     1   SC Ganguly  P Kumar           1            0         NaN  Royal Challengers Bangalore         field  Kolkata Knight Riders  M Chinnaswamy Stadium
+1    335982  2008-04-18  2007/08  2008  Kolkata Knight Riders  Royal Challengers Bangalore     0     2  BB McCullum  P Kumar           0            0         NaN  Royal Challengers Bangalore         field  Kolkata Knight Riders  M Chinnaswamy Stadium
+2    335982  2008-04-18  2007/08  2008  Kolkata Knight Riders  Royal Challengers Bangalore     0     3  BB McCullum  P Kumar           1            0         NaN  Royal Challengers Bangalore         field  Kolkata Knight Riders  M Chinnaswamy Stadium
+
+========================================================================
+  VALUE COUNTS — season
+========================================================================
+season
+2007/08    13489
+2009       13606
+2009/10    14498
+2011       17013
+2012       17767
+2013       18177
+2014       14300
+2015       13652
+2016       14096
+2017       13862
+2018       14286
+2019       14312
+2020/21    14559
+2021       14425
+2022       17912
+2023       17863
+2024       17103
+2025       17285
+2026        5473
+
+========================================================================
+  VALUE COUNTS — year
+========================================================================
+year
+2008    13489
+2009    13606
+2010    14498
+2011    17013
+2012    17767
+2013    18177
+2014    14300
+2015    13652
+2016    14096
+2017    13862
+2018    14286
+2019    14312
+2020    14559
+2021    14425
+2022    17912
+2023    17863
+2024    17103
+2025    17285
+2026     5473
+
+========================================================================
+  VALUE COUNTS — toss_decision
+========================================================================
+toss_decision
+field    186877
+bat       96801
+
+========================================================================
+  VALUE COUNTS — venue (top 20)
+========================================================================
+venue
+Eden Gardens                                                             17988
+Wankhede Stadium                                                         17591
+M Chinnaswamy Stadium                                                    14907
+Feroz Shah Kotla                                                         13950
+Wankhede Stadium, Mumbai                                                 13289
+MA Chidambaram Stadium, Chepauk                                          11760
+Rajiv Gandhi International Stadium, Uppal                                11604
+Dubai International Cricket Stadium                                      11229
+Sawai Mansingh Stadium                                                   11150
+MA Chidambaram Stadium, Chepauk, Chennai                                  9000
+Punjab Cricket Association Stadium, Mohali                                8266
+Narendra Modi Stadium, Ahmedabad                                          8176
+Sheikh Zayed Stadium                                                      6925
+Sharjah Cricket Stadium                                                   6672
+Arun Jaitley Stadium, Delhi                                               6178
+Eden Gardens, Kolkata                                                     5954
+Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow     5701
+Maharashtra Cricket Association Stadium                                   5294
+M Chinnaswamy Stadium, Bengaluru                                          5237
+Rajiv Gandhi International Stadium, Uppal, Hyderabad                      4944
+
+========================================================================
+  VALUE COUNTS — match_won_by (top 20, who won each match)
+========================================================================
+match_won_by
+Mumbai Indians                 36432
+Chennai Super Kings            34878
+Kolkata Knight Riders          31729
+Rajasthan Royals               28295
+Royal Challengers Bangalore    26801
+Sunrisers Hyderabad            22665
+Kings XI Punjab                20162
+Delhi Daredevils               15709
+Delhi Capitals                 12762
+Gujarat Titans                  9491
+Punjab Kings                    9142
+Lucknow Super Giants            7925
+Deccan Chargers                 7013
+Royal Challengers Bengaluru     5194
+Unknown                         4724
+Gujarat Lions                   3063
+Pune Warriors                   2883
+Rising Pune Supergiant          2383
+Kochi Tuskers Kerala            1322
+Rising Pune Supergiants         1105
+
+========================================================================
+  VALUE COUNTS — result_type / method
+========================================================================
+
+--- result_type ---
+result_type
+tie          3896
+no result     828
+
+--- method ---
+method
+D/L    3890
+
+--- win_outcome ---
+win_outcome
+6 wickets    31503
+7 wickets    29010
+5 wickets    25190
+8 wickets    19623
+4 wickets    15059
+9 wickets    10979
+3 wickets     8391
+10 runs       4296
+14 runs       4249
+1 runs        3986
+18 runs       3974
+12 runs       3960
+4 runs        3929
+7 runs        3703
+20 runs       3500
+
+========================================================================
+  OVER NUMBERING — 0-indexed or 1-indexed?
+========================================================================
+Min over : 0
+Max over : 19
+
+CONFIRMED: Overs are 0-indexed (0–19).
+ACTION REQUIRED: Add +1 in all phase filters.
+  Powerplay  (overs 1-6)   -> filter: over.between(0, 5)
+  Middle     (overs 7-15)  -> filter: over.between(6, 14)
+  Death      (overs 16-20) -> filter: over.between(15, 19)
+
+Over distribution (count of delivery rows per over):
+over
+0     15138
+1     14981
+2     14798
+3     14768
+4     14758
+5     14684
+6     14626
+7     14615
+8     14578
+9     14537
+10    14461
+11    14427
+12    14391
+13    14272
+14    14174
+15    14004
+16    13755
+17    13347
+18    12540
+19    10824
+
+========================================================================
+  MATCH-LEVEL EXTRACTION — one row per match
+========================================================================
+Unique matches: 1,193
+Date range    : 2008-04-18 → 2026-04-16
+
+========================================================================
+  MATCH-LEVEL — matches per season
+========================================================================
+ season  matches
+2007/08       58
+   2009       57
+2009/10       60
+   2011       73
+   2012       74
+   2013       76
+   2014       60
+   2015       59
+   2016       60
+   2017       59
+   2018       60
+   2019       60
+2020/21       60
+   2021       60
+   2022       74
+   2023       74
+   2024       71
+   2025       74
+   2026       24
+
+========================================================================
+  ANOMALY FLAGS — null / tied / no-result matches
+========================================================================
+Matches with null match_won_by : 0
+
+result_type breakdown:
+result_type
+tie          15
+no result     9
+
+========================================================================
+  ANOMALY FLAGS — Super Overs
+========================================================================
+Matches that went to Super Over : 15
+ match_id  season       date                                     venue            superover_winner
+   392190    2009 2009-04-23                                  Newlands            Rajasthan Royals
+   419121 2009/10 2010-03-21           MA Chidambaram Stadium, Chepauk             Kings XI Punjab
+   598004    2013 2013-04-07 Rajiv Gandhi International Stadium, Uppal         Sunrisers Hyderabad
+   598017    2013 2013-04-16                     M Chinnaswamy Stadium Royal Challengers Bangalore
+   729315    2014 2014-04-29                      Sheikh Zayed Stadium            Rajasthan Royals
+   829741    2015 2015-04-21              Sardar Patel Stadium, Motera             Kings XI Punjab
+  1082625    2017 2017-04-29    Saurashtra Cricket Association Stadium              Mumbai Indians
+  1175365    2019 2019-03-30                      Arun Jaitley Stadium              Delhi Capitals
+  1178426    2019 2019-05-02                          Wankhede Stadium              Mumbai Indians
+  1216493 2020/21 2020-09-20       Dubai International Cricket Stadium              Delhi Capitals
+  1216547 2020/21 2020-09-28       Dubai International Cricket Stadium Royal Challengers Bangalore
+  1216512 2020/21 2020-10-18                      Sheikh Zayed Stadium       Kolkata Knight Riders
+  1216517 2020/21 2020-10-18       Dubai International Cricket Stadium             Kings XI Punjab
+  1254077    2021 2021-04-25  MA Chidambaram Stadium, Chepauk, Chennai              Delhi Capitals
+  1473469    2025 2025-04-16               Arun Jaitley Stadium, Delhi              Delhi Capitals
+
+========================================================================
+  ANOMALY FLAGS — DLS / Reduced-over matches
+========================================================================
+Matches with a method (DLS etc.): 22
+method
+D/L    22
+
+========================================================================
+  ANOMALY FLAGS — 2020 season venues (COVID neutral venues)
+========================================================================
+2020 season matches : 60
+Venues used in 2020:
+venue
+Dubai International Cricket Stadium    6380
+Sheikh Zayed Stadium                   5301
+Sharjah Cricket Stadium                2878
+
+========================================================================
+  UNIQUE TEAM NAMES — all team columns
+========================================================================
+Total unique team names across all columns: 20
+
+  Chennai Super Kings
+  Deccan Chargers
+  Delhi Capitals
+  Delhi Daredevils
+  Gujarat Lions
+  Gujarat Titans
+  Kings XI Punjab
+  Kochi Tuskers Kerala
+  Kolkata Knight Riders
+  Lucknow Super Giants
+  Mumbai Indians
+  Pune Warriors
+  Punjab Kings
+  Rajasthan Royals
+  Rising Pune Supergiant
+  Rising Pune Supergiants
+  Royal Challengers Bangalore
+  Royal Challengers Bengaluru
+  Sunrisers Hyderabad
+  Unknown
+
+========================================================================
+  TEAM NAME NORMALIZATION MAP
+========================================================================
+name_map = {
+    "Deccan Chargers": "Sunrisers Hyderabad",  # in dataset: True
+    "Delhi Daredevils": "Delhi Capitals",  # in dataset: True
+    "Kings XI Punjab": "Punjab Kings",  # in dataset: True
+    "Rising Pune Supergiant": "Rising Pune Supergiants",  # in dataset: True
+}
+
+Verify the 'in dataset' flags above — only apply renames that exist.
+Usage: df['col'] = df['col'].replace(name_map)
+
+========================================================================
+  DELIVERIES PER TEAM (batting_team) — quick sanity check
+========================================================================
+batting_team
+Mumbai Indians                 33892
+Kolkata Knight Riders          31398
+Chennai Super Kings            31027
+Rajasthan Royals               28430
+Royal Challengers Bangalore    28205
+Sunrisers Hyderabad            24078
+Kings XI Punjab                22646
+Delhi Daredevils               18786
+Delhi Capitals                 13100
+Punjab Kings                    9331
+Deccan Chargers                 9034
+Gujarat Titans                  7827
+Lucknow Super Giants            7750
+Pune Warriors                   5443
+Royal Challengers Bengaluru     4103
+Gujarat Lions                   3566
+Rising Pune Supergiant          1900
+Kochi Tuskers Kerala            1582
+Rising Pune Supergiants         1580
+
+========================================================================
+  PHASE FILTER SANITY CHECK (0-indexed overs)
+========================================================================
+  Powerplay  (overs 1-6,  filter 0-5) :  89,127 rows (31.4%)
+  Middle     (overs 7-15, filter 6-14): 130,081 rows (45.9%)
+  Death      (overs 16-20,filter 15-19):  64,470 rows (22.7%)
+
+  Total covered : 283,678
+  Total rows    : 283,678
+  Uncovered rows:       0  ← should be 0 or only super-over overs
+
+========================================================================
+  RUNS PER BALL DISTRIBUTION (runs_total)
+========================================================================
+runs_total
+0     97449
+1    118013
+2     18641
+3       965
+4     33263
+5       569
+6     14683
+7        95
+
+========================================================================
+  WICKET TYPES DISTRIBUTION (wicket_kind)
+========================================================================
+wicket_kind
+caught                   8880
+bowled                   2379
+run out                  1169
+lbw                       861
+caught and bowled         394
+stumped                   378
+retired hurt               18
+hit wicket                 18
+retired out                 6
+obstructing the field       3
+
+========================================================================
+  EDA COMPLETE — PRE-DAY 2 CHECKLIST
+========================================================================
+  [ ] Over filter confirmed: 0-indexed → use .between(0,5) for powerplay etc.
+  [ ] name_map verified: check 'in dataset: True' flags above, add any missing renames
+  [ ] Null match_won_by count noted → exclude from all win-rate calculations
+  [ ] Super over matches noted → exclude from economy/run-rate analysis
+  [ ] DLS matches noted → exclude from Q3 (run-rate era analysis)
+  [ ] 2020 season flagged → exclude from Q5 (home advantage)
+  [ ] season format confirmed as '2007/08' → use 'year' column for numeric era splits
+  [ ] Toss columns confirmed: toss_winner, toss_decision, match_won_by all present
+  [ ] Venue column clean → check top 8 venues by match count for Q1 heatmap
+  [ ] runs_total column verified as ball-level total (batter + extras) for Q3/Q4
+
+Save this output: python notebooks/eda.py > outputs/eda_report.txt
